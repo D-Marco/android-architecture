@@ -84,11 +84,7 @@ public class TasksActivity extends AppCompatActivity implements TaskItemNavigato
     public static TasksViewModel obtainViewModel(FragmentActivity activity) {
         // Use a Factory to inject dependencies into the ViewModel
         ViewModelFactory factory = ViewModelFactory.getInstance(activity.getApplication());
-
-        TasksViewModel viewModel =
-                ViewModelProviders.of(activity, factory).get(TasksViewModel.class);
-
-        return viewModel;
+        return ViewModelProviders.of(activity, factory).get(TasksViewModel.class);
     }
 
     private void setupViewFragment() {
